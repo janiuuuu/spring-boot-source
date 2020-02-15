@@ -1,4 +1,4 @@
-package com.akademia.kodu.pracadomowa1;
+package model;
 
 public class Product {
 

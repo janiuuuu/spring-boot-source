@@ -1,6 +1,6 @@
-package com.akademia.kodu.pracadomowa1;
+package services;
 
-import java.util.List;
+import model.Product;
 
 public interface Basket {
 
@@ -9,5 +9,7 @@ public interface Basket {
     String getInfo();
 
     void addProduct(Product product);
+
+    void getBill();
 
 }

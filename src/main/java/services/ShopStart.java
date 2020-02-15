@@ -1,20 +1,21 @@
-package com.akademia.kodu.pracadomowa1;
+package services;
 
+import model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 @Service
+@Profile("start")
 @Primary
-public class ShopStart implements Basket{
+public class ShopStart implements Basket {
 
     private ProductService productService;
+
     @Autowired
-    ShopStart(ProductService productService){
-        this.productService= productService;
+    public ShopStart(ProductService productService) {
+        this.productService = productService;
     }
 
     @Override
@@ -30,5 +31,10 @@ public class ShopStart implements Basket{
     @Override
     public void addProduct(Product product) {
         productService.addProduct(product);
+    }
+
+    @Override
+    public void getBill() {
+
     }
 }

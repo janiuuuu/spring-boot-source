@@ -1,7 +1,6 @@
-package com.akademia.kodu.pracadomowa1;
+package services;
 
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
+import model.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -42,5 +41,13 @@ public class ProductService {
         productList.add(product);
 
         productList.forEach(System.out::println);
+    }
+
+    public List<Product> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
     }
 }
